@@ -18,10 +18,8 @@ const Main = ({para,setPara,count,setCount}) => {
             id="para"
             placeholder='Enter a paragraph to know its word count'
             value={para}
-            onChange={(e) => {
-                setPara(e.target.value);
-                calWord();
-            } } >
+            onKeyPress = {calWord()}
+            onChange={(e) => setPara(e.target.value)}>
         </textarea>
         <article>
             Word count: {count}
